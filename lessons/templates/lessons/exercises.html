@@ -1,0 +1,33 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<title>{{ lesson.title }}</title>
+<body>
+    <h1>{{ lesson.title }}</h1>
+    <p>{{ lesson.content }}</p>
+
+    <form method="post" action="{% url 'grade_exercises' lesson.pk %}">
+        {% csrf_token %}
+        {% for exercise in exercises %}
+        <fieldset>
+            <legend>{{ exercise.question }}</legend>
+            <label>
+                <input type="radio" name="exercise_{{ exercise.id }}" value="1">
+                {{ exercise.option_1 }}
+            </label><br>
+            <label>
+                <input type="radio" name="exercise_{{ exercise.id }}" value="2">
+                {{ exercise.option_2 }}
+            </label><br>
+            <label>
+                <input type="radio" name="exercise_{{ exercise.id }}" value="3">
+                {{ exercise.option_3 }}
+            </label><br>
+        </fieldset>
+        {% endfor %}
+        <br/>
+        <input type="submit" class="btn btn-custom" value="Submit Answers">
+        <br/><br/>
+    </form>
+
+{% endblock %}

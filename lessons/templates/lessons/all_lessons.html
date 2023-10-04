@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %}
+{% block title %}Lesson Gallery{% endblock %}
+{% block content %}
+<div class="container">
+  <h2>Lesson Gallery</h2>
+  <br/><br/>
+  <div class="row">
+    {% for lesson in object_list %}
+    <div class="col-sm-4">
+      <div class="lesson-card">
+        <div class="lesson-image">
+          {% if lesson.image %}
+            <img src="{{ lesson.image.url }}" class="img-responsive">
+          {% else %}
+            <img src="https://placehold.it/150x150?text=Lesson" class="img-responsive">
+          {% endif %}
+        </div>
+        <div class="lesson-details">
+          <h3>{{ lesson.title }}</h3>
+          <br/>
+          <a href="{% url 'lesson_detail' lesson.pk %}" class="btn btn-custom btn-block">Read More</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

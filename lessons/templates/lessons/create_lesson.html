@@ -1,0 +1,14 @@
+{% extends 'home/base.html' %}
+{% block title %}Create a Lesson{% endblock %}
+{% block content %}
+  <h1>Create a New Lesson</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-custom">Create Lesson</button>
+  </form>
+
+<br/>
+  <a href="#" class="btn btn-danger">Cancel</a>
+{% endblock %}

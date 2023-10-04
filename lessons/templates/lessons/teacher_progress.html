@@ -1,0 +1,31 @@
+{% extends "home/base.html" %}
+{% block content %}
+{% if user.profile.is_teacher %}
+  <h1>Teacher's Grade Summary</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Lesson</th>
+        <th>Student</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for lesson_score in lesson_scores %}
+        <tr>
+          <td>{{ lesson_score.lesson.title }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        {% for student_score in lesson_score.student_scores %}
+          <tr>
+            <td></td>
+            <td>{{ student_score.student.username }}</td>
+            <td>{{ student_score.score }}%</td>
+          </tr>
+        {% endfor %}
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}
+{% endblock %}
