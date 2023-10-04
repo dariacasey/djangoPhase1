@@ -1,0 +1,139 @@
+/* Default styles */
+body {
+    font-family: 'Albert Sans', sans-serif;
+    background-color: #E8E1E5;
+    color: #392D29;
+}
+
+h1, h2, h3 {
+    font-family: 'Albert Sans', sans-serif;
+}
+
+    /* Navbar Things */
+.navbar {
+    background-color: #E8E1E5;
+    color: #392D29; /* Text color for the navbar links and text */
+    font-family: 'Albert Sans', sans-serif;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.navbar-dropdown .dropdown-item {
+    color: #392D29;
+}
+
+    /* Post Card Things */
+.post-button-container{
+  background-color: #ffff; /* Change to your desired background color */
+  padding: 3px 20px; /* Adjust padding as needed */
+  border: .5px solid #392D29; /* Thickenss and color of border */
+  border-radius: 2px; /* Roundness of edges  */
+  text-align: center; /* Center the text horizontally */
+  display: inline-block; /* Make the container inline */
+  line-height: .8; /* Reduce the line height to match the height of the button */
+}
+
+.card-content {
+    flex: 1; /* Allow the content to grow and occupy remaining space */
+}
+
+.card-button {
+    align-self: flex-end;
+    margin-top: 10px;
+}
+.post-card {
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px rgba(55, 39, 34, 0.5);
+    position: relative;
+}
+
+/* Link inside the button */
+.post-button-container a {
+  color: #00000; /* Change to your desired text color */
+  text-decoration: none;
+}
+
+/* post indicator */
+.badge-success {
+    background-color: #3B2978;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    }
+
+/* Formats Author and Views */
+.custom-text {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Custom button */
+.btn-custom {
+    background-color: #ffff;
+    border-color: #392D29;
+    color: #392D29;
+
+}
+.btn-custom:hover {
+    text-decoration: underline;
+}
+
+/* Formats lessons */
+.lesson-card {
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(55, 39, 34, 0.5);
+}
+
+.lesson-image img {
+  max-width: 100%; /* Ensure the image doesn't overflow its container */
+}
+
+.lesson-details h3 {
+  margin-top: 10px; /* Add spacing between the image and title */
+}
+
+    /* Login */
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    color: #333;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}

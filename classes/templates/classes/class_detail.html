@@ -1,0 +1,20 @@
+{% extends 'home/base.html' %}
+{% block title %}Your Class{% endblock %}
+{% block content %}
+    <h1>Class Detail</h1>
+
+    {% if class_obj %}
+        <h2>{{ class_obj.name }}</h2>
+        <p>Teacher: {{ class_obj.teacher }}</p>
+        <p>Class Code: {{ class_obj.class_code }}</p>
+
+        <h3>Edit Class Details</h3>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save Changes</button>
+        </form>
+    {% else %}
+        <p>Class not found or does not exist.</p>
+    {% endif %}
+{% endblock %}
